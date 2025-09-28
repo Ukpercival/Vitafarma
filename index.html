@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaFarma - Tu Farmacia de Confianza</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#home">
+                <img src="/assets/img/vitafarmaLogo.jpg" alt="VitaFarma Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 animate-on-scroll">
+                    <h1 class="display-4 fw-bold mb-4">Bienvenidos a VitaFarma</h1>
+                    <p class="lead mb-5">Tu farmacia de confianza en Colombia. Ofrecemos medicamentos de calidad, atención personalizada y servicios especializados para cuidar tu salud y la de tu familia.</p>
+                    <a href="#catalogo" class="btn btn-primary btn-lg px-5 py-3">
+                        <i class="fas fa-capsules me-2"></i>Ver Catálogo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel de Productos Destacados -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Productos Destacados</h2>
+                <p class="text-muted">Lo mejor de cada categoría de medicamentos</p>
+            </div>
+            
+            <div id="productCarousel" class="carousel slide animate-on-scroll" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="4"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <!-- Slide 1: Genérico -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card position-relative shadow-lg border-0">
+                                    <span class="badge bg-success category-badge fs-6">GENÉRICO DESTACADO</span>
+                                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         class="card-img-top" alt="Metformina Destacada" style="height: 250px; object-fit: cover;">
+                                    <div class="card-body text-center p-4">
+                                        <h4 class="card-title text-primary mb-3">Metformina</h4>
+                                        <p class="card-text mb-3">El antidiabético más confiable para el control de glucosa. Disponible en presentaciones de 500mg y 850mg.</p>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <button class="btn btn-success px-4">Ver Más</button>
+                                            <button class="btn btn-outline-success px-4">Consultar Precio</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Alto Costo -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card position-relative shadow-lg border-0">
+                                    <span class="badge bg-warning category-badge fs-6">ALTO COSTO DESTACADO</span>
+                                    <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         class="card-img-top" alt="Adalimumab Destacado" style="height: 250px; object-fit: cover;">
+                                    <div class="card-body text-center p-4">
+                                        <h4 class="card-title text-primary mb-3">Adalimumab</h4>
+                                        <p class="card-text mb-3">Biológico de última generación para artritis reumatoide. Manejamos toda la logística especializada.</p>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <button class="btn btn-warning px-4">Ver Más</button>
+                                            <button class="btn btn-outline-warning px-4">Consultar Disponibilidad</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3: Control Especial -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card position-relative shadow-lg border-0">
+                                    <span class="badge bg-danger category-badge fs-6">CONTROL ESPECIAL</span>
+                                    <img src="https://images.unsplash.com/photo-1550572017-edd951b7debc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         class="card-img-top" alt="Clonazepam Destacado" style="height: 250px; object-fit: cover;">
+                                    <div class="card-body text-center p-4">
+                                        <h4 class="card-title text-primary mb-3">Clonazepam</h4>
+                                        <p class="card-text mb-3">Manejo seguro de benzodiacepinas con personal especializado y cumplimiento normativo estricto.</p>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <button class="btn btn-danger px-4">Ver Más</button>
+                                            <button class="btn btn-outline-danger px-4">Información de Fórmula</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4: Cadena de Frío -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card position-relative shadow-lg border-0">
+                                    <span class="badge bg-info category-badge fs-6">CADENA DE FRÍO</span>
+                                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         class="card-img-top" alt="Insulina Destacada" style="height: 250px; object-fit: cover;">
+                                    <div class="card-body text-center p-4">
+                                        <h4 class="card-title text-primary mb-3">Insulina Glargina</h4>
+                                        <p class="card-text mb-3">Sistema de refrigeración especializado garantiza la efectividad de insulinas las 24 horas.</p>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <button class="btn btn-info px-4">Ver Más</button>
+                                            <button class="btn btn-outline-info px-4">Consultar Stock</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5: Uso Institucional -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card position-relative shadow-lg border-0">
+                                    <span class="badge bg-secondary category-badge fs-6">USO INSTITUCIONAL</span>
+                                    <img src="https://images.unsplash.com/photo-1550831106-d4d5d228e0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         class="card-img-top" alt="Ceftriaxona Destacada" style="height: 250px; object-fit: cover;">
+                                    <div class="card-body text-center p-4">
+                                        <h4 class="card-title text-primary mb-3">Ceftriaxona</h4>
+                                        <p class="card-text mb-3">Suministro confiable para hospitales y clínicas con certificaciones de calidad internacional.</p>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <button class="btn btn-secondary px-4">Ver Más</button>
+                                            <button class="btn btn-outline-secondary px-4">Cotización Institucional</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo Section -->
+    <section id="catalogo" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Catálogo Completo de Medicamentos</h2>
+                <p class="text-muted">Medicamentos clasificados por categorías especializadas</p>
+            </div>
+
+            <!-- Genéricos -->
+            <div class="mb-5 animate-on-scroll">
+                <h3 class="text-center mb-4"><i class="fas fa-pills text-success me-2"></i>Medicamentos Genéricos</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-success category-badge">GENÉRICO</span>
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Metformina" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Metformina</h5>
+                                <p class="card-text">Antidiabético oral para el control de la glucosa en sangre.</p>
+                                <button class="btn btn-outline-primary">Consultar Precio</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-success category-badge">GENÉRICO</span>
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Losartan" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Losartán</h5>
+                                <p class="card-text">Antihipertensivo para el control de la presión arterial.</p>
+                                <button class="btn btn-outline-primary">Consultar Precio</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-success category-badge">GENÉRICO</span>
+                            <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Amoxicilina" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Amoxicilina</h5>
+                                <p class="card-text">Antibiótico betalactámico para infecciones bacterianas.</p>
+                                <button class="btn btn-outline-primary">Consultar Precio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alto Costo -->
+            <div class="mb-5 animate-on-scroll">
+                <h3 class="text-center mb-4"><i class="fas fa-star text-warning me-2"></i>Medicamentos de Alto Costo</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-warning category-badge">ALTO COSTO</span>
+                            <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Adalimumab" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Adalimumab</h5>
+                                <p class="card-text">Biológico para artritis reumatoide y enfermedades autoinmunes.</p>
+                                <button class="btn btn-outline-warning">Consultar Disponibilidad</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-warning category-badge">ALTO COSTO</span>
+                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Trastuzumab" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Trastuzumab</h5>
+                                <p class="card-text">Anticuerpo monoclonal para tratamiento oncológico.</p>
+                                <button class="btn btn-outline-warning">Consultar Disponibilidad</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-warning category-badge">ALTO COSTO</span>
+                            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Rituximab" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Rituximab</h5>
+                                <p class="card-text">Inmunoterapia para linfomas y enfermedades autoinmunes.</p>
+                                <button class="btn btn-outline-warning">Consultar Disponibilidad</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control Especial -->
+            <div class="mb-5 animate-on-scroll">
+                <h3 class="text-center mb-4"><i class="fas fa-shield-alt text-danger me-2"></i>Medicamentos de Control Especial</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-danger category-badge">CONTROL ESPECIAL</span>
+                            <img src="https://images.unsplash.com/photo-1550572017-edd951b7debc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Clonazepam" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Clonazepam</h5>
+                                <p class="card-text">Benzodiacepina para trastornos de ansiedad y epilepsia.</p>
+                                <button class="btn btn-outline-danger">Requiere Fórmula</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-danger category-badge">CONTROL ESPECIAL</span>
+                            <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Diazepam" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Diazepam</h5>
+                                <p class="card-text">Ansiolítico y relajante muscular de uso controlado.</p>
+                                <button class="btn btn-outline-danger">Requiere Fórmula</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-danger category-badge">CONTROL ESPECIAL</span>
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Morfina" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Morfina</h5>
+                                <p class="card-text">Analgésico opiáceo para dolor severo y cuidados paliativos.</p>
+                                <button class="btn btn-outline-danger">Requiere Fórmula</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cadena de Frío -->
+            <div class="mb-5 animate-on-scroll">
+                <h3 class="text-center mb-4"><i class="fas fa-snowflake text-info me-2"></i>Medicamentos de Cadena de Frío</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-info category-badge">CADENA DE FRÍO</span>
+                            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Insulina Glargina" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Insulina Glargina</h5>
+                                <p class="card-text">Insulina de acción prolongada para diabetes.</p>
+                                <button class="btn btn-outline-info">Disponible Refrigerado</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-info category-badge">CADENA DE FRÍO</span>
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Insulina NPH" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Insulina NPH</h5>
+                                <p class="card-text">Insulina de acción intermedia para control glucémico.</p>
+                                <button class="btn btn-outline-info">Disponible Refrigerado</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-info category-badge">CADENA DE FRÍO</span>
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Vacuna Influenza" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Vacuna contra Influenza</h5>
+                                <p class="card-text">Inmunización estacional contra la gripe.</p>
+                                <button class="btn btn-outline-info">Disponible Refrigerado</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uso Institucional -->
+            <div class="mb-5 animate-on-scroll">
+                <h3 class="text-center mb-4"><i class="fas fa-hospital text-secondary me-2"></i>Medicamentos de Uso Institucional</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-secondary category-badge">USO INSTITUCIONAL</span>
+                            <img src="https://images.unsplash.com/photo-1550831106-d4d5d228e0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Ceftriaxona" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Ceftriaxona</h5>
+                                <p class="card-text">Antibiótico cefalosporina para uso hospitalario.</p>
+                                <button class="btn btn-outline-secondary">Solo Instituciones</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-secondary category-badge">USO INSTITUCIONAL</span>
+                            <img src="https://images.unsplash.com/photo-1587854680352-936d8d1d3a86?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Furosemida" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Furosemida</h5>
+                                <p class="card-text">Diurético de asa para manejo hospitalario.</p>
+                                <button class="btn btn-outline-secondary">Solo Instituciones</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card position-relative">
+                            <span class="badge bg-secondary category-badge">USO INSTITUCIONAL</span>
+                            <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Midazolam" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Midazolam</h5>
+                                <p class="card-text">Sedante para procedimientos médicos.</p>
+                                <button class="btn btn-outline-secondary">Solo Instituciones</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="text-muted">Servicios especializados para tu bienestar y comodidad</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                    </div>
+                    <h4>Dispensación Especializada</h4>
+                    <p class="text-muted">Manejo especializado de medicamentos de alto costo y control especial con personal calificado.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-thermometer-three-quarters"></i>
+                    </div>
+                    <h4>Cadena de Frío</h4>
+                    <p class="text-muted">Sistema de refrigeración especializado para medicamentos e insulinas que requieren temperatura controlada.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h4>Consulta Farmacéutica</h4>
+                    <p class="text-muted">Asesoría personalizada sobre medicamentos, interacciones y seguimiento farmacoterapéutico.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Domicilios</h4>
+                    <p class="text-muted">Entrega segura y rápida de medicamentos en toda la ciudad con manejo especializado.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h4>Aplicación de Inyectables</h4>
+                    <p class="text-muted">Servicio de enfermería para aplicación segura de medicamentos inyectables.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>Seguimiento de Tratamientos</h4>
+                    <p class="text-muted">Control y seguimiento de adherencia a tratamientos crónicos y especializados.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h4>Ventas Institucionales</h4>
+                    <p class="text-muted">Suministro especializado a hospitales, clínicas e instituciones de salud.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h4>Gestión de Autorizaciones</h4>
+                    <p class="text-muted">Apoyo en trámites de autorizaciones ante EPS para medicamentos especiales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer-bg py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-pills me-2"></i>VitaFarma</h5>
+                    <p class="mb-4">Tu farmacia de confianza especializada en medicamentos de todas las categorías. Comprometidos con tu salud y bienestar.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-map-marker-alt me-2"></i>Ubicación</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Carrera 15 #32-41, Centro<br>Bogotá D.C., Colombia</p>
+                    <p><i class="fas fa-clock me-2"></i>Lun - Sáb: 7:00 AM - 9:00 PM<br>Domingos: 8:00 AM - 8:00 PM</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><i class="fas fa-phone me-2"></i>Contacto</h5>
+                    <p><i class="fas fa-phone me-2"></i>+57 (1) 234-5678</p>
+                    <p><i class="fas fa-mobile-alt me-2"></i>+57 300 123 4567</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@vitafarma.com.co</p>
+                    <p><i class="fas fa-whatsapp me-2"></i>WhatsApp: +57 316 545 2277</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 VitaFarma. Todos los derechos reservados. | Registro INVIMA: FM12345 | Regente: Dra. Zara Simbaqueba - TP 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
